@@ -36,7 +36,7 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
     }
 
     return (
-        <form>
+        <form >
             <div className="search">
                 <input value={inputText} type="text" className="todo-input" placeholder="Add new task" onChange={inputTextHandler} />
                 <button className="todo-button" type="submit" onClick={submitTodoHandler}>

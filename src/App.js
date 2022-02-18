@@ -2,6 +2,10 @@ import './App.css';
 import React, { useState, useEffect } from 'react'
 import Form from './components/Form'
 import TodoList from './components/TodoList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from './components/NavigationBar'
+import Container from 'react-bootstrap/Container'
+
 function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
@@ -47,9 +51,12 @@ function App() {
 
   return (
     <div className="App">
+      <Container fluid />
+      <NavigationBar/>
       <header>
         <h1>WELCOME TODO LIST</h1>
       </header>
+      
       <Form
         inputText={inputText}
         setInputText={setInputText}
@@ -57,11 +64,13 @@ function App() {
         setTodos={setTodos}
         setStatus={setStatus}
       />
+     
       <TodoList
         todos={todos}
         setTodos={setTodos}
         filteredTodos={filteredTodos}
       />
+      <Container/>
     </div>
   );
 }
