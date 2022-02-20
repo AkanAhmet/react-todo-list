@@ -7,6 +7,8 @@
 body{
   background: linear-gradient(to right, #360033, #0b8793);
   font-family: sans-serif;
+  max-width: 100%; 
+  height: auto;
 }
 
 header h1{
@@ -27,7 +29,7 @@ form{
 }
 
 form .search{
-  display: flex;
+  display: block;
 }
 
 form button,
@@ -37,13 +39,17 @@ form input{
   border: none;
   background-color: #fff;
   outline: none;
+  text-align: center;
+  max-width: 80%;
+   
 }
 
 form button{
   color: #fff;
-  background-color: #340436;
+  background-color: #3838C1;
   cursor: pointer;
   transition: all 0.3s ease;
+  
 }
 
 form button:hover{
@@ -92,6 +98,7 @@ select{
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .todo-list{
