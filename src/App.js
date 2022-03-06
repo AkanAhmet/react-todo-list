@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import Form from './components/Form'
+import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavigationBar'
@@ -57,7 +57,7 @@ function App() {
         <h1>TODO LIST</h1>
       </header>
       
-      <Form
+      <TodoForm
         inputText={inputText}
         setInputText={setInputText}
         todos={todos}

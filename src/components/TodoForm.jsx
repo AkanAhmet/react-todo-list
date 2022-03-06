@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Form from 'react-bootstrap/Form'
 
-function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
+function TodoForm({ inputText, setInputText, todos, setTodos, setStatus }) {
     const [alertWarning, setAlertWarning] = useState(false);
     const [alertSuccess, setAlertSuccess] = useState(false);
 
@@ -36,9 +37,9 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
     }
 
     return (
-        <form >
+        <Form.Group >
             <div className="search">
-                <input value={inputText} type="text" className="todo-input" placeholder="Add new task" onChange={inputTextHandler} />
+                <Form.Control value={inputText} type="text" className="todo-input" placeholder="Add new task" onChange={inputTextHandler} />
                 <button className="todo-button" type="submit" onClick={submitTodoHandler}>
                     <i className="fas fa-plus-circle"></i>
                 </button>
@@ -52,14 +53,14 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
             </div>
             <div className="alert-wrapper">
                 {alertWarning ? <div className="alert-warning">
-                    <div>PLease enter task</div>
+                    <div>Please enter task</div>
                 </div> : ""}
                 {alertSuccess ? <div className="alert-success">
                     <div>Success</div>
                 </div> : ""}
             </div>
-        </form>
+        </Form.Group>
     )
 }
 
-export default Form;
+export default TodoForm;
