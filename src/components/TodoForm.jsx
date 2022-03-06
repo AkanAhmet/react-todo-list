@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import InputGroup from 'react-bootstrap/InputGroup'
 
 function TodoForm({ inputText, setInputText, todos, setTodos, setStatus }) {
     const [alertWarning, setAlertWarning] = useState(false);
@@ -38,12 +39,14 @@ function TodoForm({ inputText, setInputText, todos, setTodos, setStatus }) {
     }
 
     return (
-        <Form.Group >
+        <form >
             <div className="search">
+            <InputGroup className="mb-3">
                 <Form.Control value={inputText} type="text" className="todo-input" placeholder="Add new task" onChange={inputTextHandler} />
                 <Button className="todo-button" type="submit" onClick={submitTodoHandler}>
                     <i className="fas fa-plus-circle"></i>
                 </Button>
+                </InputGroup>
             </div>
             <div className="select">
                 <Form.Select name="todos" className="filter-todo" onChange={statusHandler}>
@@ -60,7 +63,7 @@ function TodoForm({ inputText, setInputText, todos, setTodos, setStatus }) {
                     <div>Success</div>
                 </div> : ""}
             </div>
-        </Form.Group>
+        </form>
     )
 }
 
