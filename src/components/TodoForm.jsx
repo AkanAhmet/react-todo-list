@@ -40,16 +40,16 @@ function TodoForm({ inputText, setInputText, todos, setTodos, setStatus }) {
         <Form.Group >
             <div className="search">
                 <Form.Control value={inputText} type="text" className="todo-input" placeholder="Add new task" onChange={inputTextHandler} />
-                <button className="todo-button" type="submit" onClick={submitTodoHandler}>
+                <Button className="todo-button" type="submit" onClick={submitTodoHandler}>
                     <i className="fas fa-plus-circle"></i>
-                </button>
+                </Button>
             </div>
             <div className="select">
-                <select name="todos" className="filter-todo" onChange={statusHandler}>
+                <Form.Select name="todos" className="filter-todo" onChange={statusHandler}>
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
-                </select>
+                </Form.Select>
             </div>
             <div className="alert-wrapper">
                 {alertWarning ? <div className="alert-warning">
