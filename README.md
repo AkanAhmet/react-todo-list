@@ -1,6 +1,12 @@
-This site was built using [GitHub Pages](https://pages.github.com/). 
+# Features  🗒
 
-[***Click Here to go Todo List Page created with React](https://akanahmet.github.io/react-todo-list/)
+- Local Storage
+- Responsive Design
+- Colorful, Elegant and Modern Looking
+- This site was built using [GitHub Pages](https://pages.github.com/). 
+- This site published using [Github Actions](https://github.com/actions).
+
+ 🚀 [***Click Here to access React Todo List Page Live***](https://akanahmet.github.io/react-todo-list/)🚀
 <hr>
 # Getting Started with Create React App
 
