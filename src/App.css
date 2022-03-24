@@ -5,7 +5,8 @@
 }
 
 body{
-  background: linear-gradient(to right, #360033, #0b8793);
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
   font-family: sans-serif;
   max-width: 100%; 
   height: auto;
@@ -79,7 +80,7 @@ select{
 .select:after{
   content: "\25BC";
   position: absolute;
-  background-color: #340436;
+  background-color: orange;
   color: #fff;
   top: 0;
   right: 0;
@@ -90,7 +91,7 @@ select{
 }
 
 .select:hover:after{
-  background-color: #fff;
+  background-color: #5ebe92;
   color: #340436;
 }
 
@@ -98,8 +99,6 @@ select{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
-  
 }
 
 .todo-list{
@@ -121,6 +120,7 @@ select{
 .todo li{
   width: 100%;
   padding: 0 0.5rem;
+  overflow: auto;
 }
 
 .complete-btn,
@@ -135,7 +135,7 @@ select{
 }
 
 .complete-btn{
-  background-color: #0b8793;
+  background-color: #4BB543;
 }
 
 
